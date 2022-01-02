@@ -26,8 +26,13 @@ endif
 
 set background=dark
 set termguicolors
-let g:tokyonight_enable_italic = 1
-colorscheme tokyonight
+
+try
+  let g:tokyonight_enable_italic = 1
+  colorscheme tokyonight
+catch
+  colorscheme desert
+endtry
 
 set shiftwidth=2
 set tabstop=2 "tab size
