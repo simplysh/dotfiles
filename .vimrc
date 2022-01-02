@@ -19,7 +19,7 @@ if has('gui_running')
   elseif has("gui_macvim")
     set guifont=JetBrains\ Mono\ NL:h14
   elseif has("gui_win32")
-    set guifont=JetBrains\ Mono:h12
+    set guifont=JetBrains\ Mono:h10
   endif
 endif
 
@@ -47,6 +47,7 @@ set wildmode=longest:list,full
 set number "show line numbers
 set formatoptions+=j "remove comment character when joining commented lines
 set autoread "reload buffers if modified externally but not in vim
+set ruler "show line and col numbers
 
 " disable swap
 set noswapfile
