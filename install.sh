@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 
-# vim
-mkdir -p $HOME/.vim/autoload
-cp -fv .vim/autoload/plug.vim $HOME/.vim/autoload
-cp -fv .vimrc $HOME/.vimrc
-vim +'PlugInstall --sync' +qa
+find scripts -type f -exec chmod u+x {} +
 
-exec ./elevated.sh
+bash -x ./scripts/vim.sh
+bash -x ./scripts/firefox.sh
