@@ -31,25 +31,29 @@ colorscheme tokyonight
 set shiftwidth=2
 set tabstop=2 "tab size
 set expandtab "use soft tabs
-set autoindent "oare?
+set autoindent "copy indent from current line for new lines
+set backspace=indent,eol,start " what backspace can delete
+set complete-=i
+set smarttab
 set splitbelow
 set splitright
 set ignorecase "make search case insensitive
 set smartcase "override ignorecase if using uppercase
 set incsearch "jump to match while typing
 set hlsearch "highlight all matches
-set backspace=indent,eol,start "backspace can delete
 set spelllang=en_gb " :set spell
 set wildmenu
 set wildmode=longest:list,full
-set number " show line numbers
+set number "show line numbers
+set formatoptions+=j "remove comment character when joining commented lines
+set autoread "reload buffers if modified externally but not in vim
 
 " disable swap
 set noswapfile
 set updatecount=0
 
 set list
-set listchars=trail:-
+set listchars=trail:-,nbsp:+
 
 " special way to exit insert mode
 inoremap kj <esc>
