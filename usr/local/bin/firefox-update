@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+if [ "$EUID" -ne 0 ]
+  then echo "Must be root."
+  exit
+fi
+
+cd /home/$SUDO_USER/Downloads
+wget --content-disposition 'https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-GB'
+VERSION=`find /home/$SUDO_USER/Downloads -iname "firefox*tar*" | sort -rV | head -1`
+echo "Using $VERSION"
+sleep 2
+rm -rf /opt/firefox
+mkdir -p /opt/firefox
+tar -xvf $VERSION -C /opt
+echo "Done."
