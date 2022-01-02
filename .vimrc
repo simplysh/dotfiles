@@ -4,6 +4,7 @@ call plug#begin()
   Plug 'rhysd/git-messenger.vim', { 'on': '<Plug>(git-messenger)' }
   Plug 'mattn/emmet-vim'
   Plug 'prettier/vim-prettier', { 'on': '<Plug>(Prettier)' }
+  Plug 'kien/ctrlp.vim', { 'on': 'CtrlP' }
   "Plug 'airblade/vim-gitgutter'
   "Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 call plug#end()
@@ -48,6 +49,7 @@ set number "show line numbers
 set formatoptions+=j "remove comment character when joining commented lines
 set autoread "reload buffers if modified externally but not in vim
 set ruler "show line and col numbers
+set wildignore+=**/node_modules/** "don't search in here
 
 " disable swap
 set noswapfile
@@ -72,6 +74,7 @@ nnoremap <silent> <C-l> :nohl<CR>:pclose<CR>:helpc<CR><C-l>
 " map lazy loaded plugins
 nmap <Leader>p <Plug>(Prettier)
 nmap <Leader>gm <Plug>(git-messenger)
+nnoremap <silent> <c-p> :CtrlP<CR>
 
 let g:prettier#autoformat = 0
 let g:prettier#autoformat_require_pragma = 0
