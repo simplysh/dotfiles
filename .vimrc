@@ -76,11 +76,15 @@ nnoremap <C-Enter> O<Enter>
 " clear highlighting and close various panels
 nnoremap <silent> <C-l> :nohl<CR>:pclose<CR>:helpc<CR><C-l>
 
+" write when exiting insert mode
+autocmd TextChangedI <buffer> silent write
+
 " map lazy loaded plugins
 nmap <Leader>p <Plug>(Prettier)
 nmap <Leader>gm <Plug>(git-messenger)
 nnoremap <silent> <c-p> :CtrlP<CR>
 
+" plugin options
 let g:prettier#autoformat = 0
 let g:prettier#autoformat_require_pragma = 0
 let g:prettier#autoformat_config_present = 0
