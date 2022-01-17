@@ -9,6 +9,8 @@ call plug#begin()
   "Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 call plug#end()
 
+set encoding=utf-8
+
 if has('gui_running')
   set guioptions-=m "remove menu bar
   set guioptions-=T "remove toolbar
