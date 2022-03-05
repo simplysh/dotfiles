@@ -93,6 +93,7 @@ let g:prettier#autoformat_config_present = 0
 let g:prettier#quickfix_auto_focus = 0
 let g:prettier#config#single_quote = 'true'
 let g:git_messenger_always_into_popup = v:true
+let g:ctrlp_switch_buffer = 0
 
 " typos I sometimes make
 iabbrev ahve have
