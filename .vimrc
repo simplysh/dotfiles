@@ -5,6 +5,8 @@ call plug#begin()
   Plug 'mattn/emmet-vim'
   Plug 'prettier/vim-prettier', { 'on': '<Plug>(Prettier)' }
   Plug 'kien/ctrlp.vim', { 'on': 'CtrlP' }
+  Plug 'kana/vim-textobj-user'
+  Plug 'kana/vim-textobj-entire'
   "Plug 'airblade/vim-gitgutter'
   "Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 call plug#end()
@@ -57,6 +59,10 @@ set formatoptions+=j "remove comment character when joining commented lines
 set autoread "reload buffers if modified externally but not in vim
 set ruler "show line and col numbers
 set wildignore+=**/node_modules/** "don't search in here
+
+" file-type specific tab sizes
+autocmd Filetype c setlocal expandtab shiftwidth=4 tabstop=4
+autocmd Filetype cpp setlocal expandtab! shiftwidth=4 tabstop=4
 
 " disable swap
 set noswapfile
