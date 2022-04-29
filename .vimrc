@@ -82,7 +82,7 @@ nnoremap <c-j> m`o<esc>``
 nnoremap <C-Enter> O<Enter>
 
 " clear highlighting and close various panels
-nnoremap <silent> <C-l> :nohl<CR>:pclose<CR>:helpc<CR><C-l>
+nnoremap <silent> <C-l> :nohl<CR>:pclose<CR>:helpc<CR>:ccl<CR><C-l>
 
 " write when exiting insert mode
 autocmd TextChangedI <buffer> silent write
