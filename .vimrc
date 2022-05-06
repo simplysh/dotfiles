@@ -7,6 +7,8 @@ call plug#begin()
   Plug 'kien/ctrlp.vim', { 'on': 'CtrlP' }
   Plug 'kana/vim-textobj-user'
   Plug 'kana/vim-textobj-entire'
+  Plug 'tpope/vim-abolish'
+  Plug 'wellle/targets.vim'
   "Plug 'airblade/vim-gitgutter'
   "Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 call plug#end()
