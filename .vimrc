@@ -77,11 +77,11 @@ set listchars=trail:-,nbsp:+
 inoremap kj <esc>
 
 " insert empty line above or below current line
-nnoremap <c-k> m`O<esc>``
-nnoremap <c-j> m`o<esc>``
+nnoremap <silent> <c-k> m`O<esc>``
+nnoremap <silent> <c-j> m`o<esc>``
 
 " insert padded line
-nnoremap <C-Enter> O<Enter>
+nnoremap ko<Enter>
 
 " clear highlighting and close various panels
 nnoremap <silent> <C-l> :nohl<CR>:pclose<CR>:helpc<CR>:ccl<CR><C-l>
