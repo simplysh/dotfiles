@@ -64,7 +64,7 @@ set wildignore+=**/node_modules/** "don't search in here
 
 " file-type specific tab sizes
 autocmd Filetype c setlocal expandtab shiftwidth=4 tabstop=4
-autocmd Filetype cpp setlocal expandtab! shiftwidth=4 tabstop=4
+autocmd Filetype cpp setlocal expandtab shiftwidth=4 tabstop=4
 
 " disable swap
 set noswapfile
@@ -81,7 +81,7 @@ nnoremap <silent> <c-k> m`O<esc>``
 nnoremap <silent> <c-j> m`o<esc>``
 
 " insert padded line
-nnoremap ko<Enter>
+nnoremap <silent> <C-Enter> ko<Enter>
 
 " clear highlighting and close various panels
 nnoremap <silent> <C-l> :nohl<CR>:pclose<CR>:helpc<CR>:ccl<CR><C-l>
