@@ -61,6 +61,7 @@ set formatoptions+=j "remove comment character when joining commented lines
 set autoread "reload buffers if modified externally but not in vim
 set ruler "show line and col numbers
 set wildignore+=**/node_modules/** "don't search in here
+set autowriteall "write when changing buffer
 
 " file-type specific tab sizes
 autocmd Filetype c setlocal expandtab shiftwidth=4 tabstop=4
