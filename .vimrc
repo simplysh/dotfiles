@@ -86,8 +86,8 @@ nnoremap <silent> <C-Enter> ko<Enter>
 " clear highlighting and close various panels
 nnoremap <silent> <C-l> :nohl<CR>:pclose<CR>:helpc<CR>:ccl<CR><C-l>
 
-" write when exiting insert mode
-autocmd TextChanged,TextChangedI * if &readonly == 0 && filereadable(bufname('%')) | silent write | endif
+" write when losing focus
+autocmd FocusLost * if &readonly == 0 && filereadable(bufname('%')) | silent write | endif
 
 " map lazy loaded plugins
 nmap <Leader>p <Plug>(Prettier)
