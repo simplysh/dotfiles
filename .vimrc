@@ -87,7 +87,7 @@ nnoremap <silent> <C-Enter> ko<Enter>
 nnoremap <silent> <C-l> :nohl<CR>:pclose<CR>:helpc<CR>:ccl<CR><C-l>
 
 " write when losing focus
-autocmd FocusLost * if &readonly == 0 && filereadable(bufname('%')) | silent write | endif
+autocmd FocusLost * silent wall
 
 " map lazy loaded plugins
 nmap <Leader>p <Plug>(Prettier)
