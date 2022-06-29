@@ -62,6 +62,7 @@ set autoread "reload buffers if modified externally but not in vim
 set ruler "show line and col numbers
 set wildignore+=**/node_modules/** "don't search in here
 set autowriteall "write when changing buffer
+set makeprg=make\ -s\ run
 
 " file-type specific tab sizes
 autocmd Filetype c setlocal expandtab shiftwidth=4 tabstop=4
@@ -89,6 +90,9 @@ nnoremap <silent> <C-l> :nohl<CR>:pclose<CR>:helpc<CR>:ccl<CR><C-l>
 
 " write when losing focus
 autocmd FocusLost * silent wall
+
+" save and compile
+nnoremap <silent> <F5> :wall<CR>:make<CR>
 
 " map lazy loaded plugins
 nmap <Leader>p <Plug>(Prettier)
