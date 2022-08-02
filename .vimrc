@@ -1,5 +1,4 @@
 call plug#begin()
-  Plug 'ghifarit53/tokyonight-vim'
   Plug 'tpope/vim-surround'
   Plug 'rhysd/git-messenger.vim', { 'on': '<Plug>(git-messenger)' }
   Plug 'mattn/emmet-vim'
@@ -9,7 +8,10 @@ call plug#begin()
   Plug 'kana/vim-textobj-entire'
   Plug 'tpope/vim-abolish'
   Plug 'wellle/targets.vim'
-  "Plug 'airblade/vim-gitgutter'
+  Plug 'tyrannicaltoucan/vim-deep-space'
+  Plug 'tpope/vim-repeat'
+  Plug 'ghifarit53/tokyonight-vim'
+  Plug 'airblade/vim-gitgutter'
   "Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 call plug#end()
 
@@ -35,7 +37,7 @@ set termguicolors
 
 try
   let g:tokyonight_enable_italic = 1
-  colorscheme tokyonight
+  colorscheme deep-space
 catch
   colorscheme desert
 endtry
@@ -63,6 +65,7 @@ set ruler "show line and col numbers
 set wildignore+=**/node_modules/** "don't search in here
 set autowriteall "write when changing buffer
 set makeprg=make\ -s\ run
+set updatetime=400 " delay before file is written to disk
 
 " file-type specific tab sizes
 autocmd Filetype c setlocal expandtab shiftwidth=4 tabstop=4
@@ -119,5 +122,4 @@ iabbrev cosnt const
 " $ vim -u NONE " start vim without loading config
 
 "source ~/.coc ":CocInstall coc-tsserver
-"set updatetime=400 " delay before file is written to disk
 
