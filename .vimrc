@@ -11,6 +11,7 @@ call plug#begin()
   Plug 'tyrannicaltoucan/vim-deep-space'
   Plug 'tpope/vim-repeat'
   Plug 'ghifarit53/tokyonight-vim'
+  Plug 'simplysh/papaya', { 'on': 'PapayaMake' }
   Plug 'airblade/vim-gitgutter'
   "Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 call plug#end()
@@ -94,13 +95,11 @@ nnoremap <silent> <C-l> :nohl<CR>:pclose<CR>:helpc<CR>:ccl<CR><C-l>
 " write when losing focus
 autocmd FocusLost * silent wall
 
-" save and compile
-nnoremap <silent> <F5> :wall<CR>:make<CR>
-
 " map lazy loaded plugins
 nmap <Leader>p <Plug>(Prettier)
 nmap <Leader>gm <Plug>(git-messenger)
 nnoremap <silent> <c-p> :CtrlP<CR>
+nnoremap <silent> <F5> :wall<CR>:PapayaMake<CR>
 
 " plugin options
 let g:prettier#autoformat = 0
