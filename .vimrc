@@ -23,6 +23,8 @@ if has('gui_running')
   set guioptions-=T "remove toolbar
   set guicursor=a:block-Cursor "use block cursor
   set guicursor+=a:blinkon0 "disable blinking
+  set noerrorbells " disabled by gui for some reason
+  set vb t_vb=
 
   if has("gui_gtk2") || has("gui_gtk3")
     set guifont=JetBrains\ Mono\ 10
@@ -67,6 +69,7 @@ set wildignore+=**/node_modules/** "don't search in here
 set autowriteall "write when changing buffer
 set makeprg=make\ -s\ run
 set updatetime=400 " delay before file is written to disk
+set noerrorbells " disable bell sound
 
 " file-type specific tab sizes
 autocmd Filetype c setlocal expandtab shiftwidth=4 tabstop=4
