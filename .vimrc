@@ -3,7 +3,7 @@ call plug#begin()
   Plug 'rhysd/git-messenger.vim', { 'on': '<Plug>(git-messenger)' }
   Plug 'mattn/emmet-vim'
   Plug 'prettier/vim-prettier', { 'on': '<Plug>(Prettier)' }
-  Plug 'kien/ctrlp.vim', { 'on': 'CtrlP' }
+  Plug 'kien/ctrlp.vim', { 'on': ['CtrlP', 'CtrlPTag'] }
   Plug 'kana/vim-textobj-user'
   Plug 'kana/vim-textobj-entire'
   Plug 'tpope/vim-abolish'
@@ -102,6 +102,7 @@ autocmd FocusLost * silent wall
 nmap <Leader>p <Plug>(Prettier)
 nmap <Leader>gm <Plug>(git-messenger)
 nnoremap <silent> <c-p> :CtrlP<CR>
+nnoremap <silent> <c-t> :CtrlPTag<CR>
 nnoremap <silent> <F5> :wall<CR>:PapayaMake<CR>
 
 " plugin options
