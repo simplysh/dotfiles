@@ -19,12 +19,12 @@ call plug#end()
 set encoding=utf-8
 
 if has('gui_running')
+  autocmd GUIEnter * set vb t_vb=
+
   set guioptions-=m "remove menu bar
   set guioptions-=T "remove toolbar
   set guicursor=a:block-Cursor "use block cursor
   set guicursor+=a:blinkon0 "disable blinking
-  set noerrorbells " disabled by gui for some reason
-  set vb t_vb=
 
   if has("gui_gtk2") || has("gui_gtk3")
     set guifont=JetBrains\ Mono\ 10
