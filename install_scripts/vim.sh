@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 
-mkdir -p $HOME/.vim/autoload
-cp -fv .vim/autoload/plug.vim $HOME/.vim/autoload
-cp -fv .vimrc $HOME/.vimrc
-vim +'PlugInstall --sync' +qa
+[ "$UID" -eq 0 ] || exec sudo "$0" "$@"
+
+git -C /tmp clone --depth 1 https://github.com/vim/vim.git
+cd /tmp/vim
+
+make
+make install
+
+rm -rf /tmp/vim
 

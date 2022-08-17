@@ -3,4 +3,5 @@
 find install_scripts -type f -exec chmod u+x {} +
 
 bash -x ./install_scripts/vim.sh
+bash -x ./install_scripts/vimrc.sh
 bash -x ./install_scripts/firefox.sh
