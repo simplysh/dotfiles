@@ -104,6 +104,7 @@ nmap <Leader>gm <Plug>(git-messenger)
 nnoremap <silent> <c-p> :CtrlP<CR>
 nnoremap <silent> <c-t> :CtrlPTag<CR>
 nnoremap <silent> <F5> :wall<CR>:PapayaMake<CR>
+nnoremap <silent> <leader><bs> :PapayaOutput<cr>
 
 " plugin options
 let g:prettier#autoformat = 0
