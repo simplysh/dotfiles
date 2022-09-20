@@ -2,6 +2,8 @@
 
 [ "$UID" -eq 0 ] || exec sudo "$0" "$@"
 
+apt install wget -y
+
 cp -fv usr/local/bin/firefox-update /usr/local/bin/firefox-update
 chmod u+x /usr/local/bin/firefox-update
 firefox-update
