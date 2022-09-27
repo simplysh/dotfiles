@@ -13,6 +13,7 @@ call plug#begin()
   Plug 'ghifarit53/tokyonight-vim'
   Plug 'simplysh/papaya', { 'on': 'PapayaMake' }
   Plug 'airblade/vim-gitgutter'
+  Plug 'tpope/vim-fugitive'
   "Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 call plug#end()
 
