@@ -89,6 +89,7 @@ inoremap kj <esc>
 " insert empty line above or below current line
 nnoremap <silent> <c-k> m`O<esc>``
 nnoremap <silent> <c-j> m`o<esc>``
+nnoremap <silent> <c-_> f.r-a><esc>
 
 " insert padded line
 nnoremap <silent> <C-Enter> ko<Enter>
