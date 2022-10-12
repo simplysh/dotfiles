@@ -1,0 +1,8 @@
+1. REMAPPING KEYS:
+Figure out which key you want to remap:
+
+xev -event keyboard
+
+Once you have the key code, write it to ~/.Xmodmap
+
+keycode 94 = backslash bar
