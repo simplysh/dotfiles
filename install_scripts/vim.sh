@@ -2,7 +2,7 @@
 
 [ "$UID" -eq 0 ] || exec sudo "$0" "$@"
 
-apt-get build-dep vim-gtk -y
+apt-get build-dep vim-gtk3 -y
 
 git -C /tmp clone --depth 1 https://github.com/vim/vim.git
 cd /tmp/vim
@@ -10,7 +10,7 @@ cd /tmp/vim
 ./configure \
   --with-features=huge \
   --with-x \
-  --enable-gui=gtk2 \
+  --enable-gui=gtk3 \
   --enable-fail-if-missing
 
 make && make install
