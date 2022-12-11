@@ -127,5 +127,5 @@ iabbrev cosnt const
 " :let @" = expand("%:t") " put current file name (tail) in unnamed register
 " $ vim -u NONE " start vim without loading config
 
-"source ~/.coc ":CocInstall coc-tsserver
+"source ~/.cocrc ":CocInstall coc-tsserver coc-rls
 
