@@ -6,3 +6,8 @@ xev -event keyboard
 Once you have the key code, write it to ~/.Xmodmap
 
 keycode 94 = backslash bar
+
+2. SYSTEMD
+List all services
+
+systemctl list-unit-files
