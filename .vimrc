@@ -14,6 +14,7 @@ call plug#begin()
   Plug 'simplysh/papaya', { 'on': 'PapayaMake' }
   Plug 'airblade/vim-gitgutter'
   Plug 'tpope/vim-fugitive'
+  Plug 'godlygeek/tabular', { 'on': 'Tab' }
   "Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 call plug#end()
 
@@ -127,5 +128,5 @@ iabbrev cosnt const
 " :let @" = expand("%:t") " put current file name (tail) in unnamed register
 " $ vim -u NONE " start vim without loading config
 
-"source ~/.cocrc ":CocInstall coc-tsserver coc-rust-analyzer
+"source ~/.cocrc ":CocInstall coc-tsserver coc-rls
 
