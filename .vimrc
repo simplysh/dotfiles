@@ -90,7 +90,10 @@ inoremap kj <esc>
 " insert empty line above or below current line
 nnoremap <silent> <c-k> m`O<esc>``
 nnoremap <silent> <c-j> m`o<esc>``
+
+" turn one character into '->'
 nnoremap <silent> <c-_> r-a><esc>
+nnoremap <silent> <c--> r-a><esc>
 
 " insert padded line
 nnoremap <silent> <C-Enter> ko<Enter>
