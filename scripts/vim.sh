@@ -16,4 +16,5 @@ cd /tmp/vim
 make && make install
 
 rm -rf /tmp/vim
+apt-get autoremove
 

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-find install_scripts -type f -exec chmod u+x {} +
+find scripts -type f -exec chmod u+x {} +
 
-bash -x ./install_scripts/vim.sh
-bash -x ./install_scripts/vimrc.sh
-bash -x ./install_scripts/fonts.sh
-bash -x ./install_scripts/firefox.sh
+bash -x ./scripts/vim.sh
+bash -x ./scripts/vimrc.sh
+bash -x ./scripts/fonts.sh
+bash -x ./scripts/firefox.sh
