@@ -13,4 +13,5 @@ sleep 2
 rm -rf /opt/firefox
 mkdir -p /opt/firefox
 tar -xvf $VERSION -C /opt
+rm -rf $VERSION
 echo "Done."
