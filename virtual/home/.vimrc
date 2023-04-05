@@ -3,7 +3,7 @@ call plug#begin()
   Plug 'rhysd/git-messenger.vim', { 'on': '<Plug>(git-messenger)' }
   Plug 'mattn/emmet-vim'
   Plug 'prettier/vim-prettier', { 'on': '<Plug>(Prettier)' }
-  Plug 'kien/ctrlp.vim', { 'on': ['CtrlP', 'CtrlPTag'] }
+  Plug 'ctrlpvim/ctrlp.vim', { 'on': ['CtrlP', 'CtrlPTag'] }
   Plug 'kana/vim-textobj-user'
   Plug 'kana/vim-textobj-entire'
   Plug 'tpope/vim-abolish'
