@@ -15,6 +15,7 @@ call plug#begin()
   Plug 'airblade/vim-gitgutter'
   Plug 'tpope/vim-fugitive'
   Plug 'godlygeek/tabular', { 'on': 'Tab' }
+  Plug 'cocopon/inspecthi.vim', { 'on': 'Inspecthi' }
   "Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 call plug#end()
 
