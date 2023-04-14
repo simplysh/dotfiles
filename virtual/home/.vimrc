@@ -75,8 +75,7 @@ set updatetime=400 " delay before file is written to disk
 set noerrorbells " disable bell sound
 
 " file-type specific tab sizes
-autocmd Filetype c setlocal expandtab shiftwidth=4 tabstop=4
-autocmd Filetype cpp setlocal expandtab shiftwidth=4 tabstop=4
+autocmd Filetype c,cpp setlocal expandtab shiftwidth=4 tabstop=4
 
 " disable swap
 set noswapfile
@@ -125,6 +124,13 @@ let g:ctrlp_switch_buffer = 0
 " typos I sometimes make
 iabbrev ahve have
 iabbrev cosnt const
+
+" highlight aliases for C intrinsic types
+function! ExtendedCType()
+  syn keyword cTypeExtended u8 u16 u32 u64 i8 i16 i32 i64 f32 f64 usize
+  hi! link cTypeExtended cType
+endfunction
+autocmd filetype c,cpp :call ExtendedCType()
 
 " helpful commands to remember
 " :let @" = expand("%") " put current file name in unnamed register
