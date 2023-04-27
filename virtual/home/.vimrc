@@ -24,6 +24,7 @@ set encoding=utf-8
 if has('gui_running')
   autocmd GUIEnter * set vb t_vb=
 
+  set guiligatures=->+-&\|/
   set guioptions-=m "remove menu bar
   set guioptions-=T "remove toolbar
   set guicursor=a:block-Cursor "use block cursor
