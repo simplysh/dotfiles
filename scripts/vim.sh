@@ -18,3 +18,4 @@ make && make install
 rm -rf /tmp/vim
 apt-get autoremove
 
+cp -fv virtual/usr/share/applications/gvim.desktop /usr/share/applications/
