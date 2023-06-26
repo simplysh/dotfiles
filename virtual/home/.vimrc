@@ -27,6 +27,7 @@ if has('gui_running')
   set guiligatures=->+-&\|/
   set guioptions-=m "remove menu bar
   set guioptions-=T "remove toolbar
+  set guioptions-=L "don't show left-hand-side scrollbar
   set guicursor=a:block-Cursor "use block cursor
   set guicursor+=a:blinkon0 "disable blinking
 
