@@ -127,6 +127,7 @@ let g:ctrlp_switch_buffer = 0
 " typos I sometimes make
 iabbrev ahve have
 iabbrev cosnt const
+iabbrev funciton function
 
 " highlight aliases for C intrinsic types
 function! ExtendedCType()
