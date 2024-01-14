@@ -16,6 +16,6 @@ cd /tmp/vim
 make && make install
 
 rm -rf /tmp/vim
-apt-get autoremove
+apt-get autoremove -y
 
 cp -fv virtual/usr/share/applications/gvim.desktop /usr/share/applications/
