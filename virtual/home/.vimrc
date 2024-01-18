@@ -142,5 +142,8 @@ autocmd filetype c,cpp :call ExtendedCType()
 " :let @" = expand("%:t") " put current file name (tail) in unnamed register
 " $ vim -u NONE " start vim without loading config
 
-"source ~/.cocrc ":CocInstall coc-tsserver
+if exists(':CocInstall')
+  ":CocInstall coc-tsserver
+  source ~/.cocrc
+endif
 
