@@ -32,12 +32,15 @@ if has('gui_running')
   set guicursor+=a:blinkon0 "disable blinking
 
   if has("gui_gtk2") || has("gui_gtk3")
+    set guifont=Geist\ Mono\ 11 linespace=1
+    "set guifont=JetBrains\ Mono\ 11
     "set guifont=Inconsolata\ Regular\ 13
-    set guifont=JetBrains\ Mono\ 11
   elseif has("gui_macvim")
-    set guifont=JetBrains\ Mono\ NL:h14
+    set guifont=Geist\ Mono:h14 linespace=1
+    "set guifont=JetBrains\ Mono\ NL:h14
   elseif has("gui_win32")
-    set guifont=JetBrains\ Mono:h10
+    set guifont=Geist\ Mono:h10 linespace=1
+    "set guifont=JetBrains\ Mono:h10
   endif
 endif
 
