@@ -16,7 +16,7 @@ call plug#begin()
   Plug 'tpope/vim-fugitive'
   Plug 'godlygeek/tabular', { 'on': 'Tab' }
   Plug 'cocopon/inspecthi.vim', { 'on': 'Inspecthi' }
-  "Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+  "Plug 'neoclide/coc.nvim', { 'branch': 'release' } | source ~/.cocrc
 call plug#end()
 
 set encoding=utf-8
@@ -144,9 +144,4 @@ autocmd filetype c,cpp :call ExtendedCType()
 " :let @" = expand("%:p") " put current file path in unnamed register
 " :let @" = expand("%:t") " put current file name (tail) in unnamed register
 " $ vim -u NONE " start vim without loading config
-
-if exists(':CocInstall')
-  ":CocInstall coc-tsserver
-  source ~/.cocrc
-endif
 
