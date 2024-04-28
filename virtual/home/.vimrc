@@ -74,7 +74,7 @@ set number "show line numbers
 set formatoptions+=j "remove comment character when joining commented lines
 set autoread "reload buffers if modified externally but not in vim
 set ruler "show line and col numbers
-set wildignore+=**/node_modules/**,**/build/**,**/target/***.o,*.d "don't search in here
+set wildignore+=**/node_modules/**,**/build/**,**/dist/**,**/coverage/**,**/target/**,*.o,*.d "don't search in here
 set autowriteall "write when changing buffer
 set makeprg=make\ -s\ run
 set updatetime=400 " delay before file is written to disk
