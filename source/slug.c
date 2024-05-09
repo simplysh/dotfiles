@@ -10,7 +10,7 @@ void append(char *source, char *dest, int *len) {
     while (*source) {
         char c = *source++;
 
-        if ((c >= 'a' && c <= 'z') || (c >= '0' && c <= '9')) {
+        if ((c >= 'a' && c <= 'z') || (c >= '0' && c <= '9') || c == '_') {
             *(dest + (*len)++) = c;
             in_between = false;
         } else if (c >= 'A' && c <= 'Z') {
@@ -19,7 +19,7 @@ void append(char *source, char *dest, int *len) {
         } else if (c == '\'') {
            continue;
         } else {
-            if (!in_between) *(dest + (*len)++) = separator;
+            if (!in_between && *len) *(dest + (*len)++) = separator;
             in_between = true;
         }
     }
