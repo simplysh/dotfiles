@@ -7,3 +7,4 @@ bash -x ./scripts/vimrc.sh
 bash -x ./scripts/fonts.sh
 bash -x ./scripts/firefox.sh
 bash -x ./scripts/bin.sh
+bash -x ./scripts/tmux.sh
