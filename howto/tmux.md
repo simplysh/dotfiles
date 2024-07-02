@@ -39,7 +39,29 @@ Show all active windows (picker)
 ```
 C-b w
 ```
-To close windows/panes, simply log out of the bash shell (`C-d`). Windows dissappear when they have no more panes
+To make a pane fullscreen (use again to restore):
+```
+C-b z
+```
+To close windows/panes, simply log out of the bash shell (`C-d`). Windows dissappear when they have no more panes.
+
+If for some reason a window is not responsive, you can terminate it with
+```
+C-b x
+```
+
+To enter _copy mode_
+```
+C-b [
+```
+This mode allows you to scroll and search within the window. You can select text by pressing `Space` and moving around, followed by `Enter`.
+To exit copy mode you can press `q`.
+
+To paste selected text, use
+```
+C-b ]
+```
+
 Now, tmux runs its own server, so you can disconnect from a session and go back to it later. To disconnect from the current session:
 ```
 C-b d
@@ -53,4 +75,4 @@ To reconnect back to session (index)
 $ tmux attach -t 0
 ```
 
-That’s it! you now have basic working knowledge
+That’s it! you now have basic working knowledge of tmux.
