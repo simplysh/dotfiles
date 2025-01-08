@@ -11,7 +11,7 @@ call plug#begin()
   Plug 'tyrannicaltoucan/vim-deep-space'
   Plug 'tpope/vim-repeat'
   Plug 'ghifarit53/tokyonight-vim'
-  Plug 'simplysh/papaya', { 'on': 'PapayaMake' }
+  Plug 'simplysh/papaya', { 'on': ['PapayaMake', 'PapayaDoc'] }
   Plug 'airblade/vim-gitgutter'
   Plug 'tpope/vim-fugitive'
   Plug 'godlygeek/tabular', { 'on': 'Tab' }
@@ -117,7 +117,8 @@ nmap <Leader>gm <Plug>(git-messenger)
 nnoremap <silent> <c-p> :CtrlP<CR>
 nnoremap <silent> <c-t> :CtrlPTag<CR>
 nnoremap <silent> <F5> :wall<CR>:PapayaMake<CR>
-nnoremap <silent> <leader><bs> :PapayaOutput<cr>
+nnoremap <silent> <leader><bs> :PapayaOutput<CR>
+nnoremap <silent> K :PapayaDoc<CR>
 
 " plugin options
 let g:prettier#autoformat = 0
@@ -145,4 +146,3 @@ autocmd filetype c,cpp :call ExtendedCType()
 " :let @" = expand("%:p") " put current file path in unnamed register
 " :let @" = expand("%:t") " put current file name (tail) in unnamed register
 " $ vim -u NONE " start vim without loading config
-
