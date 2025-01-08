@@ -79,6 +79,7 @@ set autowriteall "write when changing buffer
 set makeprg=make\ -s\ run
 set updatetime=400 " delay before file is written to disk
 set noerrorbells " disable bell sound
+set tagcase=match " always match tag case
 
 " file-type specific tab sizes
 autocmd Filetype c,cpp setlocal expandtab shiftwidth=4 tabstop=4
