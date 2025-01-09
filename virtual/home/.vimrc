@@ -94,6 +94,9 @@ set listchars=trail:-,nbsp:+
 " special way to exit insert mode
 inoremap kj <esc>
 
+" shortcut for tag omnicompletion
+inoremap <c-i> <c-x><c-]>
+
 " insert empty line above or below current line
 nnoremap <silent> <c-k> m`O<esc>``
 nnoremap <silent> <c-j> m`o<esc>``
