@@ -11,7 +11,7 @@ call plug#begin()
   Plug 'tyrannicaltoucan/vim-deep-space'
   Plug 'tpope/vim-repeat'
   Plug 'ghifarit53/tokyonight-vim'
-  Plug 'simplysh/papaya', { 'on': ['PapayaMake', 'PapayaDoc'] }
+  Plug 'simplysh/papaya'
   Plug 'airblade/vim-gitgutter'
   Plug 'tpope/vim-fugitive'
   Plug 'godlygeek/tabular', { 'on': 'Tab' }
@@ -114,7 +114,7 @@ nnoremap <silent> <C-l> :nohl<CR>:pclose<CR>:helpc<CR>:ccl<CR><C-l>
 " write when losing focus
 autocmd FocusLost * silent! wall
 
-" map lazy loaded plugins
+" map plugins
 nmap <Leader>p <Plug>(Prettier)
 nmap <Leader>gm <Plug>(git-messenger)
 nnoremap <silent> <c-p> :CtrlP<CR>
@@ -136,13 +136,6 @@ let g:ctrlp_switch_buffer = 0
 iabbrev ahve have
 iabbrev cosnt const
 iabbrev funciton function
-
-" highlight aliases for C intrinsic types
-function! ExtendedCType()
-  syn keyword cTypeExtended u8 u16 u32 u64 i8 i16 i32 i64 f32 f64 usize
-  hi! link cTypeExtended cType
-endfunction
-autocmd filetype c,cpp :call ExtendedCType()
 
 " helpful commands to remember
 " :let @" = expand("%") " put current file name in unnamed register
