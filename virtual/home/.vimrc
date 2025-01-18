@@ -109,7 +109,7 @@ nnoremap <silent> <c--> r-a><esc>
 nnoremap <silent> <C-Enter> ko<Enter>
 
 " clear highlighting and close various panels
-nnoremap <silent> <C-l> :nohl<CR>:pclose<CR>:helpc<CR>:ccl<CR><C-l>
+nnoremap <silent> <C-l> :nohl<CR>:pclose<CR>:helpc<CR>:ccl<CR>:call popup_clear()<CR><C-l>
 
 " write when losing focus
 autocmd FocusLost * silent! wall
