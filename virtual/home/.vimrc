@@ -82,20 +82,17 @@ set noerrorbells " disable bell sound
 set tagcase=match " always match tag case
 
 " file-type specific tab sizes
-autocmd Filetype c,cpp setlocal expandtab shiftwidth=4 tabstop=4
+autocmd Filetype c,cpp setlocal noexpandtab shiftwidth=4 tabstop=4
 
 " disable swap
 set noswapfile
 set updatecount=0
 
 set list
-set listchars=trail:-,nbsp:+
+set listchars=trail:-,nbsp:+,tab:\ \ 
 
 " special way to exit insert mode
 inoremap kj <esc>
-
-" shortcut for tag omnicompletion
-inoremap <c-i> <c-x><c-]>
 
 " insert empty line above or below current line
 nnoremap <silent> <c-k> m`O<esc>``
