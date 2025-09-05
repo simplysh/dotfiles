@@ -48,8 +48,10 @@ set background=dark
 set termguicolors
 
 try
+  let g:tokyonight_style='night'
   let g:tokyonight_enable_italic = 1
   colorscheme tokyonight
+  highlight Comment guifg=#676b98 ctermfg=cyan
 catch
   colorscheme desert
 endtry
