@@ -49,7 +49,7 @@ set termguicolors
 
 try
   let g:tokyonight_enable_italic = 1
-  colorscheme deep-space
+  colorscheme tokyonight
 catch
   colorscheme desert
 endtry
