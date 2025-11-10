@@ -14,6 +14,7 @@ call plug#begin()
   Plug 'simplysh/papaya'
   Plug 'airblade/vim-gitgutter'
   Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-commentary'
   Plug 'godlygeek/tabular', { 'on': 'Tab' }
   Plug 'cocopon/inspecthi.vim', { 'on': 'Inspecthi' }
   "Plug 'neoclide/coc.nvim', { 'branch': 'release' } | source ~/.cocrc
@@ -85,8 +86,9 @@ set noerrorbells " disable bell sound
 set tagcase=match " always match tag case
 set completeopt-=preview " don't show preview window for omnicompletion
 
-" file-type specific tab sizes
+" file-type specific settings
 autocmd Filetype c,cpp setlocal noexpandtab shiftwidth=4 tabstop=4
+autocmd FileType c setlocal omnifunc=ccomplete#Complete
 autocmd BufRead,BufNewFile */fortuna/* setlocal shiftwidth=4 softtabstop=4 expandtab
 
 " disable swap
@@ -144,3 +146,4 @@ iabbrev funciton function
 " :let @" = expand("%:p") " put current file path in unnamed register
 " :let @" = expand("%:t") " put current file name (tail) in unnamed register
 " $ vim -u NONE " start vim without loading config
+" <C-x><C-o> " trigger omnicompletion in insert mode
